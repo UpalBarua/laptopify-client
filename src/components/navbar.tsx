@@ -1,3 +1,4 @@
+import { MobileNav } from "@/components/mobile-nav";
 import { buttonVariants } from "@/components/ui/button";
 import { navLinks } from "@/config";
 import { Laptop } from "lucide-react";
@@ -19,12 +20,14 @@ export function Navbar() {
               variant: "ghost",
               size: "sm",
             })}
+            key={href}
             href={href}
           >
             {label}
           </Link>
         ))}
       </nav>
+      <MobileNav />
     </header>
   );
 }
