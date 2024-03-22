@@ -1,5 +1,6 @@
 import { FlashSale } from "@/components/flash-sale";
 import { Hero } from "@/components/hero";
+import { MostPopular } from "@/components/most-popular";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <main>
       <Hero />
       <FlashSale />
+      <MostPopular />
       <Image
         src="/laptop-img.jpg"
         alt=""

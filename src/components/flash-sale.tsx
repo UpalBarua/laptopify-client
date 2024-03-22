@@ -1,6 +1,6 @@
+import { LaptopCard } from "@/components/laptop-card";
 import { buttonVariants } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
-import { LaptopCard } from "@/components/laptop-card";
 import Link from "next/link";
 
 export function FlashSale() {

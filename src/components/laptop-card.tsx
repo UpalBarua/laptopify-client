@@ -4,7 +4,11 @@ export function LaptopCard() {
   return (
     <div>
       <div className="relative">
-        <img className="w-full rounded-2xl" src="/laptop-img.jpg" alt="" />
+        <img
+          className="min-h-[20rem] w-full rounded-2xl object-cover object-center"
+          src="/laptop-img.jpg"
+          alt=""
+        />
         <span className="absolute left-0 top-0 m-2 flex min-w-[4rem] items-center justify-center rounded-full bg-background/60 py-1 text-sm">
           -14%
         </span>
