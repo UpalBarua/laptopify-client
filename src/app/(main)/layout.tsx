@@ -7,7 +7,7 @@ type MainLayoutProps = {
 
 export default function MainLayout({ children }: Readonly<MainLayoutProps>) {
   return (
-    <div>
+    <div className="relative">
       <Navbar />
       {children}
     </div>

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function Navbar() {
   return (
-    <header className="container mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+    <header className="container relative z-[10] mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
       <Link className="flex items-center gap-x-2" href="/">
         <Laptop className="text-primary" />
         <span className="text-foregorund text-lg font-bold tracking-tight">
