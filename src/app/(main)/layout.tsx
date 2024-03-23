@@ -8,7 +8,7 @@ type MainLayoutProps = {
 
 export default function MainLayout({ children }: Readonly<MainLayoutProps>) {
   return (
-    <div className="relative flex h-full flex-col">
+    <div className="relative flex min-h-screen flex-col">
       <div className="flex-1">
         <Navbar />
         {children}

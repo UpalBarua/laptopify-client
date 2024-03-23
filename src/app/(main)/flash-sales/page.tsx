@@ -4,24 +4,22 @@ import type { Laptop } from "@/types";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
-export async function FlashSale() {
-  const response = await fetch("http://localhost:8080/flash-sales?limit=8", {
-    next: {
-      revalidate: 30,
-    },
+export default async function FlashSales() {
+  const response = await fetch("http://localhost:8080/flash-sales", {
+    cache: "no-store",
   });
   const laptops = await response.json();
 
   return (
-    <section className="container mx-auto max-w-7xl px-4 pb-[max(10dvw,_6rem)]">
-      <div className="flex items-center justify-between pb-8">
+    <section className="container mx-auto max-w-7xl px-4">
+      <div className="flex flex-col justify-start gap-4 pb-8">
         <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
           Flash Sales
         </h2>
-        <Link href="/flash-sales" className={buttonVariants({})}>
-          <span>View All</span>
-          <ChevronRight />
-        </Link>
+        <p className="max-w-prose leading-relaxed text-foreground/60">
+          Explore our Flash Sales section for limited-time deals on top laptops.
+          Hurry, grab your favorite at a discounted price before they're gone!
+        </p>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
         {laptops.map((laptop: Laptop) => (

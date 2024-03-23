@@ -1,3 +1,5 @@
+import { brands } from "@/config/laptops";
+
 export type Laptop = {
   _id: string;
   image: string;
@@ -26,3 +28,5 @@ export type Laptop = {
   }[];
   createdAt: string;
 };
+
+export type Brand = (typeof brands)[number];

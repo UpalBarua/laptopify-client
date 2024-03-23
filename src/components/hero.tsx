@@ -2,7 +2,7 @@ import { HeroCarousel } from "@/components/hero-carousel";
 
 export function Hero() {
   return (
-    <div className="container relative z-10 mx-auto flex min-h-[40rem] max-w-7xl flex-col items-center justify-center gap-4 px-4 pb-[12rem]">
+    <div className="container relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 px-4 pb-[max(10dvw,_6rem)]">
       <h1 className="text-center text-[clamp(1.875rem,_6vw+0.5rem,_3.25rem)] font-extrabold tracking-tight">
         Empowering Your Digital Journey,
         <br className="hidden md:block" />
