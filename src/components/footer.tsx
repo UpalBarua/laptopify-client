@@ -5,7 +5,7 @@ import { navLinks } from "@/config";
 
 export function Footer() {
   return (
-    <footer className="container mx-auto mt-[min(25dvw,_8rem)] flex max-w-7xl flex-col items-center justify-center gap-8 border-t border-foreground/10 px-4 py-14 text-center">
+    <footer className="container mt-[min(25dvw,_8rem)] flex flex-col items-center justify-center gap-8 border-t border-foreground/10 py-14 text-center">
       <div className="flex flex-col items-center justify-center space-y-1">
         <Link
           href="/"
