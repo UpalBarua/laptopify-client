@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 type MainLayoutProps = {
   children: ReactNode;
@@ -7,9 +8,12 @@ type MainLayoutProps = {
 
 export default function MainLayout({ children }: Readonly<MainLayoutProps>) {
   return (
-    <div className="relative">
-      <Navbar />
-      {children}
+    <div className="relative flex h-full flex-col">
+      <div className="flex-1">
+        <Navbar />
+        {children}
+      </div>
+      <Footer />
     </div>
   );
 }

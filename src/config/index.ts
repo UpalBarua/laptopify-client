@@ -1,3 +1,5 @@
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+
 export const navLinks = [
   {
     href: "/",
@@ -22,5 +24,24 @@ export const navLinks = [
   {
     href: "/contact-us",
     label: "Contact Us",
+  },
+] as const;
+
+export const socialLinks = [
+  {
+    Icon: Facebook,
+    link: "facebook.com",
+  },
+  {
+    Icon: Twitter,
+    link: "twitter.com",
+  },
+  {
+    Icon: Instagram,
+    link: "instagram.com",
+  },
+  {
+    Icon: Linkedin,
+    link: "linkedin.com",
   },
 ] as const;
