@@ -7,6 +7,7 @@ import { brands } from "@/config/laptops";
 import { cn } from "@/lib/utils";
 import { SlidersHorizontal, X } from "lucide-react";
 import { Fragment, useState } from "react";
+import { priceRanges } from "@/config";
 
 export function FiltersSidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -37,14 +38,12 @@ export function FiltersSidebar() {
               <div className="mx-4 rounded-md border border-foreground/10 p-4 md:mx-0 md:p-6">
                 <h3 className="pb-4 font-medium tracking-tight">Price Range</h3>
                 <div className="space-y-3">
-                  {Array(4)
-                    .fill("")
-                    .map((_, i) => (
-                      <div key={i} className="flex items-center gap-x-2.5">
-                        <Checkbox className="rounded" id="terms" />
-                        <Label htmlFor="terms">$20.00 - $50.00</Label>
-                      </div>
-                    ))}
+                  {priceRanges.map((range) => (
+                    <div key={range} className="flex items-center gap-x-2.5">
+                      <Checkbox className="rounded" id="terms" />
+                      <Label htmlFor="terms">{range}</Label>
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className="mx-4 rounded-md border border-foreground/10 p-4 md:mx-0 md:p-6">
@@ -66,7 +65,7 @@ export function FiltersSidebar() {
                     .map((_, i) => (
                       <div key={i} className="flex items-center gap-x-2.5">
                         <Checkbox className="rounded" id="terms" />
-                        <Label htmlFor="terms">{i + i} Stars</Label>
+                        <Label htmlFor="terms">{i + 1} Stars</Label>
                       </div>
                     ))}
                 </div>

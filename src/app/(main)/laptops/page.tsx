@@ -9,7 +9,7 @@ export default async function Laptops() {
   const laptops = await response.json();
 
   return (
-    <section className="container mx-auto flex max-w-7xl flex-col items-start gap-4 px-4 md:flex-row">
+    <section className="container mx-auto mt-20 flex max-w-7xl flex-col items-start gap-4 px-4 md:flex-row">
       <FiltersSidebar />
       <div>
         <div className="space-y-2 pb-6">

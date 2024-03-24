@@ -19,7 +19,7 @@ export function LaptopCard({
     >
       <div className="relative p-2">
         <Image
-          className="min-h-[20rem] w-full rounded-2xl object-cover object-center"
+          className="h-[20rem] w-full rounded-2xl object-cover object-center"
           src={image}
           alt={model}
           height={300}

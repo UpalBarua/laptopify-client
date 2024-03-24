@@ -10,11 +10,11 @@ export const navLinks = [
     label: "Categories",
   },
   {
-    href: "/products",
-    label: "Products",
+    href: "/laptops",
+    label: "Laptops",
   },
   {
-    href: "/flash-sale",
+    href: "/flash-sales",
     label: "Flash Sale",
   },
   {
@@ -44,4 +44,11 @@ export const socialLinks = [
     Icon: Linkedin,
     link: "linkedin.com",
   },
+] as const;
+
+export const priceRanges = [
+  "$699.99 - $1299.99",
+  "$1399.99 - $1799.99",
+  "$1999.99 - $2399.99",
+  "$2499.99 - $2599.99",
 ] as const;
