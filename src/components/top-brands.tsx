@@ -5,7 +5,10 @@ import Link from "next/link";
 
 export function TopBrands() {
   return (
-    <section className="container mx-auto flex max-w-7xl flex-col items-center justify-center px-4 pb-[12rem]">
+    <section
+      id="brands"
+      className="container mx-auto flex max-w-7xl scroll-mt-20 flex-col items-center justify-center px-4 pb-[12rem]"
+    >
       <div className="space-y-4 pb-8 text-center">
         <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
           Top Brands

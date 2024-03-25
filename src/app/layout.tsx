@@ -20,8 +20,9 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "min-h-screen bg-background text-foreground/90 antialiased",
+          "min-h-screen !scroll-smooth bg-background text-foreground/90 antialiased",
         )}
+        style={{ scrollBehavior: "smooth" }}
       >
         {children}
       </body>

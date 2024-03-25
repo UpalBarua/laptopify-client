@@ -4,9 +4,9 @@ import { Heart, SquareCheckBig, Star } from "lucide-react";
 import Image from "next/image";
 
 export async function generateStaticParams() {
-  const laptops = await fetch("http://localhost:8080/laptops/").then((res) =>
-    res.json(),
-  );
+  const laptops = await fetch(
+    "https://laptopify-server.vercel.app/laptops/",
+  ).then((res) => res.json());
 
   const firstTenLaptops = laptops.slice(0, 10);
 
@@ -21,7 +21,7 @@ export default async function LaptopDetails({
   params: { laptopId: string };
 }) {
   const response = await fetch(
-    `http://localhost:8080/laptops/${params.laptopId}`,
+    `https://laptopify-server.vercel.app/laptops/${params.laptopId}`,
   );
   const laptopDetails: Laptop = await response.json();
 

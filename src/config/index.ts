@@ -6,8 +6,8 @@ export const navLinks = [
     label: "Home",
   },
   {
-    href: "/categories",
-    label: "Categories",
+    href: "/#brands",
+    label: "Brands",
   },
   {
     href: "/laptops",

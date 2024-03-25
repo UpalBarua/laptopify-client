@@ -5,12 +5,11 @@ import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export async function MostPopular() {
-  const response = await fetch("http://localhost:8080/trending", {
+  const laptops = await fetch("https://laptopify-server.vercel.app/trending", {
     next: {
       revalidate: 30,
     },
-  });
-  const laptops = await response.json();
+  }).then((res) => res.json());
 
   return (
     <section className="container mx-auto max-w-7xl px-4 pb-[12rem]">

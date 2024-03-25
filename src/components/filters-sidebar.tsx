@@ -31,7 +31,7 @@ export function FiltersSidebar() {
     router.push(
       `/laptops?brand=${selectedBrand || ""}&priceRange=${selectedPriceRange || ""}&ratings=${selectedRatings || ""}`,
     );
-  }, [selectedBrand, selectedRatings, selectedPriceRange]);
+  }, [selectedBrand, selectedRatings, selectedPriceRange, router]);
 
   return (
     <Fragment>

@@ -9,12 +9,11 @@ import {
 import type { Laptop } from "@/types";
 
 export async function HeroCarousel() {
-  const response = await fetch("http://localhost:8080/trending", {
+  const laptops = await fetch("https://laptopify-server.vercel.app/trending", {
     next: {
       revalidate: 30,
     },
-  });
-  const laptops = await response.json();
+  }).then((res) => res.json());
 
   return (
     <Carousel

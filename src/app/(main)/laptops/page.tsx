@@ -13,16 +13,15 @@ type LaptopsProps = {
 export default async function Laptops({
   searchParams,
 }: Readonly<LaptopsProps>) {
-  const response = await fetch(
-    `http://localhost:8080/laptops?brand=${searchParams.brand || ""}&priceRange=${searchParams.priceRange || ""}&ratings=${searchParams.ratings || ""}`,
+  const laptops = await fetch(
+    `https://laptopify-server.vercel.app/laptops?brand=${searchParams.brand || ""}&priceRange=${searchParams.priceRange || ""}&ratings=${searchParams.ratings || ""}`,
     {
       cache: "no-store",
     },
-  );
-  const laptops = await response.json();
+  ).then((res) => res.json());
 
   return (
-    <section className="container mx-auto mt-20 flex max-w-7xl flex-col items-start gap-4 px-4 md:flex-row">
+    <section className="container mx-auto flex max-w-7xl flex-col items-start gap-4 px-4 pt-20 md:flex-row md:gap-8 md:pt-24">
       <FiltersSidebar />
       <div>
         <div className="space-y-2 pb-6">
