@@ -2,10 +2,23 @@ import { FiltersSidebar } from "@/components/filters-sidebar";
 import { LaptopCard } from "@/components/laptop-card";
 import { Laptop } from "@/types";
 
-export default async function Laptops() {
-  const response = await fetch("http://localhost:8080/laptops", {
-    cache: "no-store",
-  });
+type LaptopsProps = {
+  searchParams: {
+    brand: string;
+    priceRange: string;
+    ratings: string;
+  };
+};
+
+export default async function Laptops({
+  searchParams,
+}: Readonly<LaptopsProps>) {
+  const response = await fetch(
+    `http://localhost:8080/laptops?brand=${searchParams.brand || ""}&priceRange=${searchParams.priceRange || ""}&ratings=${searchParams.ratings || ""}`,
+    {
+      cache: "no-store",
+    },
+  );
   const laptops = await response.json();
 
   return (
@@ -21,7 +34,7 @@ export default async function Laptops() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {laptops.map((laptop: Laptop) => (
+          {laptops?.map((laptop: Laptop) => (
             <LaptopCard key={laptop._id} {...laptop} />
           ))}
         </div>

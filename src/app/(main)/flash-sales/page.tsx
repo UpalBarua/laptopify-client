@@ -1,6 +1,6 @@
+import { CountdownTimer } from "@/components/countdown-timer";
 import { LaptopCard } from "@/components/laptop-card";
 import type { Laptop } from "@/types";
-import { CountdownTimer } from "@/components/countdown-timer";
 
 export default async function FlashSales() {
   const response = await fetch("http://localhost:8080/flash-sales", {
