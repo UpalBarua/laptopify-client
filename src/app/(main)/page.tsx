@@ -5,7 +5,7 @@ import { TopBrands } from "@/components/top-brands";
 
 export default function Home() {
   return (
-    <main className="pt-20 md:pt-24">
+    <main>
       <Hero />
       <FlashSale />
       <TopBrands />

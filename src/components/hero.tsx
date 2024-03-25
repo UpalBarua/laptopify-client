@@ -2,9 +2,9 @@ import { HeroCarousel } from "@/components/hero-carousel";
 
 export function Hero() {
   return (
-    <div className="border-foregroun/10 mb-[max(10dvw,_6rem)] border-b bg-[url('/laptop-img.jpg')]">
+    <div className="border-foregroun/10  mb-[max(10dvw,_6rem)] border-b bg-[url('/laptop-img.jpg')]">
       <div className="backdrop-brightness-[10%]">
-        <div className="container relative z-10 mx-auto flex min-h-[52rem] max-w-7xl flex-col items-center justify-center gap-4 px-4">
+        <div className="container relative z-10 mx-auto flex min-h-[52rem] max-w-7xl flex-col items-center justify-center gap-4 px-4 pt-20 md:pt-24">
           <h1 className="text-center text-[clamp(1.875rem,_6vw+0.5rem,_3.25rem)] font-extrabold leading-[1.25] tracking-tight">
             Empowering Your Digital Journey,
             <br className="hidden md:block" />

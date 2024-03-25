@@ -24,4 +24,4 @@ To get started, follow these simple steps:
 
 ## Live Demo
 
-Check out the live demo [here]().
+Check out the live demo [here](https://laptopify-client.vercel.app/).

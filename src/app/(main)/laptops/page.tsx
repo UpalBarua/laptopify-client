@@ -33,9 +33,13 @@ export default async function Laptops({
           </p>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {laptops?.map((laptop: Laptop) => (
-            <LaptopCard key={laptop._id} {...laptop} />
-          ))}
+          {laptops.length ? (
+            laptops?.map((laptop: Laptop) => (
+              <LaptopCard key={laptop._id} {...laptop} />
+            ))
+          ) : (
+            <p className="text-2xl text-foreground/60">No Laptops Found</p>
+          )}
         </div>
       </div>
     </section>
