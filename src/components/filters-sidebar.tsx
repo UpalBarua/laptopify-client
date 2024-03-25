@@ -8,7 +8,7 @@ import { brands } from "@/config/laptops";
 import { cn } from "@/lib/utils";
 import type { Brand } from "@/types";
 import { SlidersHorizontal, X } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Fragment, useEffect, useState } from "react";
 
 type BrandNames = Brand["name"];
@@ -17,9 +17,12 @@ type Ratings = 1 | 2 | 3 | 4 | 5;
 
 export function FiltersSidebar() {
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [selectedBrand, setSelectedBrand] = useState<BrandNames | null>(null);
+  const [selectedBrand, setSelectedBrand] = useState<BrandNames | null>(
+    searchParams.get("brand") as BrandNames,
+  );
   const [selectedPriceRange, setSelectedPriceRange] =
     useState<PriceRanges | null>(null);
   const [selectedRatings, setSelectedRatings] = useState<Ratings | null>(null);
